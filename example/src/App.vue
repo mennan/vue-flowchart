@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+  <flowchart :items="items"></flowchart>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Flowchart from './components/Flowchart.vue';
+import Style from './assets/flowchart.css';
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Flowchart
+  },
+  data() {
+    return {
+      items: [{
+        header: "Deneme",
+        content: "Deneme content"
+      },
+      {
+        header: "Deneme",
+        content: "Deneme content"
+      },
+      {
+        header: "Deneme",
+        content: "Deneme content"
+      },
+      {
+        header: "Deneme",
+        content: "Deneme content"
+      }]
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

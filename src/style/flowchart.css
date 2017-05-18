@@ -1,0 +1,169 @@
+.clearfix:after{
+    clear: both;
+}
+
+.flowchart-container {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.flowchart {
+    position: relative;
+    padding: 3em 0 3em 0;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.flowchart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 2px;
+    background: #fff;
+}
+
+.flowchart-block:first-child {
+    margin-top: 0;
+}
+
+.flowchart-block {
+    position: relative;
+    margin: 2em 0;
+}
+
+.flowchart-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flowchart-point {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background: #b3b3b3;
+    border: 2px solid #fff;
+}
+
+.flowchart-point.small {
+    height: 12px;
+    margin-left: 13px;
+    margin-top: 14px;
+    width: 12px;
+}
+
+.flowchart-content {
+    position: relative;
+    margin-left: 60px;
+}
+
+.flowchart-content .card {
+    margin-bottom: 0;
+}
+
+.card.full-width {
+    width: 100% !important;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.card {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: #FFF;
+    float: left;
+    position: relative;
+    border-radius: 4px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-bottom: 20px;
+    width: 300px;
+    border: 1px solid #e6e6e6;
+}
+
+.card.share .card-header {
+    padding: 15px 15px 12px;
+    border-bottom: 1px solid #daeffd;
+}
+
+.card.share .card-header h5 {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    line-height: 22.7px;
+    font-family: arial;
+    letter-spacing: -0.006em;
+    margin-top: -3px;
+}
+
+.card.share .card-description {
+    border-width: 1px;
+}
+
+.card.share .card-description, .card.share .card-feed, .card.share .card-footer {
+    border-color: transparent;
+    border-style: solid;
+}
+
+.card.share .card-description {
+    padding: 12px 16px 11px;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+}
+
+.card.share .card-description p {
+    margin-bottom: 4px;
+}
+
+@media only screen and (min-width: 1170px) {
+  .flowchart-container:not(.left) .flowchart {
+      margin-bottom: 3em;
+  }
+
+  .flowchart-container:not(.left) .flowchart::before {
+      left: 50%;
+      margin-left: -2px;
+  }
+
+  .flowchart-container:not(.left) .flowchart .flowchart-block:first-child {
+      margin-top: 0;
+  }
+
+  .flowchart-container:not(.left) .flowchart .flowchart-block {
+      margin: 4em 0;
+  }
+
+  .flowchart-container:not(.left) .flowchart .flowchart-point {
+      left: 50%;
+      margin-left: -21px;
+      -webkit-transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+  }
+
+  .flowchart-container:not(.left) .flowchart .flowchart-point.small {
+      margin-left: -9px;
+  }
+
+  .flowchart-container:not(.left) .flowchart .flowchart-block:nth-child(odd) .flowchart-content .card {
+      float: left;
+  }
+
+  .flowchart-container:not(.left) .flowchart .flowchart-block:nth-child(even) .flowchart-content {
+      float: right;
+  }
+
+  .flowchart-container:not(.left) .flowchart .flowchart-content {
+      margin-left: 0;
+      width: 46%;
+  }
+}
